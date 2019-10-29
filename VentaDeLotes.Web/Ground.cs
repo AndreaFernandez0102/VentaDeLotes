@@ -15,7 +15,6 @@ namespace VentaDeLotes.Web.Entities
 
     [Required(ErrorMessage = "El campo {0} es requerido")]
     [MaxLength(50, ErrorMessage = "El campo {0} debe tener máximo {1} caracter")]
-        [Index("GroundNameIndex", IsUnique = true)]
     [Display(Name = "Terreno")]
     public string Name { get; set; }
     }

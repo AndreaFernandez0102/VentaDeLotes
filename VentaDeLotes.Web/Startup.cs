@@ -28,7 +28,7 @@ namespace VentaDeLotes.Web
         {
             services.AddDbContext<DataContext>(cfg =>
             {
-                cfg.UseSqlServer(Configuration.GetConnectionString("DefaulConnection"))
+                cfg.UseSqlServer(Configuration.GetConnectionString("DefaulConnection"));
 
             });
 
