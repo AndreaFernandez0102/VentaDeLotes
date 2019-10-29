@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace VentaDeLotes.Web
+namespace VentaDeLotes.Web.Entities
 {
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
@@ -11,11 +11,12 @@ namespace VentaDeLotes.Web
     public class Ground
     {
         [Key]
-        public in GroundId { get; set }
+        public int GroundId { get; set; }
+
     [Required(ErrorMessage = "El campo {0} es requerido")]
     [MaxLength(50, ErrorMessage = "El campo {0} debe tener máximo {1} caracter")]
-    [Index("GroundNameIndex", IsUnique = true)]
+        [Index("GroundNameIndex", IsUnique = true)]
     [Display(Name = "Terreno")]
-    public string Name { get; set }
+    public string Name { get; set; }
     }
 }
