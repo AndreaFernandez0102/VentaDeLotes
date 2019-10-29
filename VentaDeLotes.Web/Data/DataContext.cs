@@ -8,6 +8,7 @@ namespace VentaDeLotes.Web.Data
     using Microsoft.EntityFrameworkCore;
     public class DataContext:DbContext
     {
+        public DbSet<Ground> Grounds { get; set; }
         public DataContext(DbContextOptions<DataContext> options):base(options)
         {
 
