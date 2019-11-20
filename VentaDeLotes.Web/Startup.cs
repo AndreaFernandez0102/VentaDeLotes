@@ -28,7 +28,7 @@ namespace VentaDeLotes.Web
         {
             services.AddDbContext<DataContext>(cfg =>
             {
-                cfg.UseSqlServer(Configuration.GetConnectionString("DefaulConnection"));
+                cfg.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
 
             });
             services.Configure<CookiePolicyOptions>(options =>
@@ -39,7 +39,7 @@ namespace VentaDeLotes.Web
             });
 
 
-            services.AddMvc();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
     }
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(
