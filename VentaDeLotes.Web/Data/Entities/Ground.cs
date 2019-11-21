@@ -13,9 +13,24 @@ namespace VentaDeLotes.Web.Entities
         [Key]
         public int GroundId { get; set; }
 
-    [Required(ErrorMessage = "El campo {0} es requerido")]
-    [MaxLength(50, ErrorMessage = "El campo {0} debe tener máximo {1} caracter")]
-    [Display(Name = "Terreno")]
-    public string Name { get; set; }
+
+
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        [Display(Name = "Terreno")]
+        public string Grounds { get; set; }
+
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        [Display(Name = "Precio")]
+        public decimal Price { get; set; }
+
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        [Display(Name = "Cantidad")]
+        public int Quatity { get; set; }
+
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        [Display(Name = "Descripción")]
+        public string Description { get; set; }
+
+
     }
 }
