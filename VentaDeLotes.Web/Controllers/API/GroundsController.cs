@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace VentaDeLotes.Web.Controllers.API
 {
-    public class GroundsController
+    using Microsoft.AspNetCore.Mvc;
+    public class GroundsController:Controller
     {
     }
 }
